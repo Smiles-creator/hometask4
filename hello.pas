@@ -1,5 +1,22 @@
-﻿{Создайте там файл hello.pas, и напишите в нём код, выводящий на консоль "Привет, мир!".}
+﻿{Измените код в файле hello.pas, чтобы программа спрашивала у пользователя язык, на котором он говорит и выводила приветствие на этом языке.}
 begin
-  Println('Привет, мир!');
+  var lang := ReadString('Выберите язык (rus - Русский, eng - English, esp - Español): ');
+  if lang = 'rus' then
+    Println('Привет, Мир!')
+  else if lang = 'eng' then
+    Println('Hello, world!')
+  else if lang = 'esp' then
+    Println('¡Hola mundo!')
+  else
+    Println('Неверный выбор языка. Попробуйте снова.');
 end.
-{Привет, мир!}
+{Выберите язык (rus - Русский, eng - English, esp - Español):  rus
+Привет, Мир!
+
+Выберите язык (rus - Русский, eng - English, esp - Español):  eng
+Hello, world!
+
+Выберите язык (rus - Русский, eng - English, esp - Español):  esp
+¡Hola mundo!
+
+}
